@@ -1,14 +1,13 @@
 (function($){
-	$.fn.truncateList = function(options) {
+  $.fn.truncateList = function(options) {
+    var defaults = {
+      elements: 'li',
+      numberOfItems: 3,
+      moreText: '...',
+      lessText: '<'
+    };
 
-		var defaults = {
-			elements: 'li',
-			numberOfItems: 3,
-			moreText: '...',
-			lessText: '<'
-		};
-
-		var options = $.extend(defaults, options);
+    var options = $.extend(defaults, options);
 
     return this.each(function() {
       var target = $(this);
@@ -33,5 +32,5 @@
         }
       }
 		});
-	};
+  };
 })(jQuery);
